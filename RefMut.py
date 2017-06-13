@@ -1,4 +1,4 @@
-import sys, re, subprocess, copy, argparse
+import sys, re, subprocess, copy, argparse, random
 from optparse import OptionParser
 
 
