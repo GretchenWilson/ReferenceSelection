@@ -75,7 +75,7 @@ class RefMut(object):
                 position = 0
                 new_pos = False
                 while new_pos is False:
-                    position = randint(0, self.ref_seq_len - 1)
+                    position = random.randint(0, self.ref_seq_len - 1)
                     if position not in mutated_positions:
                         mutated_positions.append(position)
                         new_pos = True
@@ -83,7 +83,7 @@ class RefMut(object):
                 current_symbol = self.ref_seq[position]
                 temp_table = copy.copy(mutations)
                 temp_table.remove(current_symbol)
-                mutation = temp_table[randint(0, 2)]
+                mutation = temp_table[random.randint(0, 2)]
                 self.ref_seq = self.ref_seq[0:position] + mutation + self.ref_seq[position +1:]
                 #print "Position", position, current_symbol, ">", mutation
 
